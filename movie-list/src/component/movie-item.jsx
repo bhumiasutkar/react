@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
 class Movie extends Component {
-  state = {};
   render() {
     const item = this.props;
     return (
