@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import Item from "./todoitem";
 import './todolist.css'
 class ListsItems extends Component {
@@ -12,14 +12,21 @@ class ListsItems extends Component {
     this.setState({ list: e.target.value });
   };
   addList = () => {
-    const newItem = {
+    let email = this.state.list;
+    let inputError = 'black';
+    if (email === "" || email === undefined) {
+     inputError = 'red';
+     return;
+    }
+     const newItem = {
       id: Math.random(),
-      email: this.state.list,
+      email: email,
       done: false,
     };
     const updateItem = [...this.state.lists, newItem];
-   this.setState({ lists: updateItem, list: "" });
+    this.setState({ lists: updateItem, list: " " });
   };
+
  deleteHandler = (elId) => {
   const todo = this.state.lists.filter((c) => c.id !== elId);
    console.log('test ', elId);
@@ -38,15 +45,15 @@ class ListsItems extends Component {
         <div className="col-md-12">
           <div className="todo-input-card">
             <input
-            className="form-control"
-            name="item"
-            type="email"
-            placeholder="add item into list"
-            value={item}
-            onChange={this.handleChange}
-          required="required"/>
-          <button className="btn-sm btn" onClick={this.addList}>
-            <i className="fa fa-plus-square"></i>
+                className="form-control"
+                name="item"
+                type="email"
+                placeholder="add item into list"
+                value={item}
+                style={{borderColor:''}}
+                onChange={this.handleChange} />
+          <button className="add-btn btn-sm btn" onClick={this.addList}>
+            Add list <i className="fa fa-plus-square"></i>
           </button>
           </div>
         </div>
