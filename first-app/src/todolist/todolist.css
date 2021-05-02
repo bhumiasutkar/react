@@ -1,0 +1,21 @@
+.todo-input-card {
+  background: #33001a;
+  padding: 20px;
+  border-radius: 12px;
+  color: #fff;
+  box-shadow: 0 1px 8px #33001a;
+  display: flex;
+  margin: 20px auto;
+}
+.todo-container {
+  max-width: 900px;
+  width: 100%;
+  margin: 30px auto;
+}
+.list-group {
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgb(68, 10, 60);
+}
+.center {
+  text-align: center;
+}
