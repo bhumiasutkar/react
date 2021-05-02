@@ -40,13 +40,13 @@ class App extends Component {
           totalCount={this.state.counters.filter((c) => c.value > 0).length}
         />
         <main className="container">
+          <ListsItems />
           <Counters
             counters={this.state.counters}
             onReset={this.resetHandler}
             onDelete={this.deleteHandler}
             onIncrement={this.incrementHandler}
           />
-          <ListsItems />
         </main>
       </React.Fragment>
     );
