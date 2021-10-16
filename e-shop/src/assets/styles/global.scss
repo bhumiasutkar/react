@@ -1,0 +1,50 @@
+*,
+::after,
+::before,
+body,
+html {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: #666;
+  line-height: 24px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+a:hover {
+  text-decoration: none;
+}
+p {
+  margin: 0;
+}
+form {
+  input {
+    background-color: transparent;
+    border: 1px solid #ebebeb;
+    color: #666;
+    font-size: 14px;
+    height: 45px;
+    margin-bottom: 30px;
+    padding: 0 15px;
+    width: 100%;
+    outline: none;
+  }
+}

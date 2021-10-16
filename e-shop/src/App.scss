@@ -1,0 +1,20 @@
+@import "./assets/styles/main.scss";
+
+section{
+  padding: 20px 0;
+}
+/* browser scrollbar design start */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #efefef;
+}
+
+::-webkit-scrollbar-thumb {
+  background:transparent;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #28a745;
+}
+/* browser scrollbar design end */

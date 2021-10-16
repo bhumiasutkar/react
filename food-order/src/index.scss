@@ -1,0 +1,25 @@
+*,
+body,
+html {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Crimson Text", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@import url("https://fonts.googleapis.com/css2?family=Girassol&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap");
+
+@import "./App.scss";
+p {
+  font-size: $font-16;
+}
+a {
+  text-decoration: none;
+  color: $black;
+}
+h1 {
+  font-family: "Girassol", cursive;
+}

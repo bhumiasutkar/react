@@ -1,0 +1,73 @@
+.slide{
+    width: 100%;
+    background-color: lightblue;
+    height: 200px;
+    font-size: 25px;
+    text-align: center;
+    margin: 0 20px;
+}
+.item{
+    width: 100%;
+    height: 520px;
+    background-position: center;
+    position: relative;
+    -webkit-transition: background-image 0.2s ease-in-out;
+transition: background-image 0.2s ease-in-out;
+
+}
+.rec.rec-slider-container{
+    margin: 0;
+}
+.rec.rec-arrow-left{
+        opacity: 1;
+    transform: translate(20px, -35px);
+    left: 0px;
+}
+.rec.rec-arrow, .rec.rec-arrow {
+    border-radius: 0;
+    cursor: pointer;
+    min-width: 70px;
+    min-height: 70px;
+    position: absolute;
+    display: block;
+    z-index: 1000;
+    border-radius: 50%;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.1);
+    top: 50%;
+}
+.rec.rec-arrow-right{
+   opacity: 1;
+    transform: translate(-90px, -35px);
+    left: 100%;
+}
+/* round buttons on hover */
+.rec.rec-arrow:hover, .rec.rec-arrow:focus, .rec.rec-arrow:hover:enabled
+ {
+  border-radius: 50%;
+  background-color: #28a745;
+  color: #fff;
+}
+
+/* disable default outline on focused items */
+/* add custom outline on focused items */
+.rec-carousel-item:focus {
+  outline: none;
+  box-shadow: inset 0 0 1px 1px lightgrey;
+}
+.rec.rec-dot{
+    display: none;
+}
+
+.slideContent {
+padding: 30px;
+top: 50%;
+position: absolute;
+font-size: 22px;
+font-style: oblique;
+max-width: 400px;
+line-height: 130%;
+word-break: keep-all;
+left: 50px;
+color: #000;
+}

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
+import Breadcrumb from "../Header/breadcrumb"
 class About extends Component {
-  state = {};
-  render() {
-    return <h5>About page </h5>;
+  render () {
+    return <Breadcrumb/>
   }
 }
 
