@@ -1,0 +1,101 @@
+React
+
+1. mutableref, imutable ref
+
+2. synthetic events
+ 
+3. controlled and uncontrolled
+
+4. Hooks, HOC, Redux, Middleware
+
+5. Next js, express js, Node js
+
+6. Mongo db
+
+7. lazy component
+
+JS
+1. Prototype
+2. Callback
+3. Clouser
+4. Hoisting
+5. call, apply, bind
+6. promises, async wait
+7. destructuring, rest, spread 
+9. event bubbling, event capturing
+
+10. generator functions
+
+
+difference between constructors and regular function
+switch
+useEffect - component A-B-C consoles
+
+
+How to compare object
+How to copy objects
+Arrow
+Contex
+Redux
+How redux works
+ like 1
+
+[03:46 pm] Suraj Dedhiya
+Controlled and uncontrolled components
+
+[03:46 pm] Suraj Dedhiya
+Flexbox
+
+[03:46 pm] Suraj Dedhiya
+Useeffect
+
+
+----------------------------
+
+React
+
+1. mutableref, imutable ref
+
+2. synthetic events
+ 
+3. controlled and uncontrolled
+
+4. Hooks, HOC, Redux, Middleware
+
+5. Switch, exact, 
+6. API calls , saga
+
+JS
+1. Prototype
+2. Callback
+3. Clouser
+4. Hoisting
+5. call, apply, bind
+6. promises, async wait
+7. destructuring, rest, spread 
+9. event bubbling, event capturing
+10. generator functions
+11. Constructor
+
+
+----------------------------
+
+
+https://medium.com/front-end-weekly/how-to-create-private-route-with-react-router-v6-fa4b9d74cb55
+
+
+------------------
+
+
+
+
+todo:
+- forwordref
+- Redux - thunk, logger, sagas
+- Routes
+- pagination
+- react lazy
+- usememo
+- useCallback
+- portals
+

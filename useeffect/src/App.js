@@ -1,36 +1,60 @@
 import React, { useContext } from "react";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Provider } from "react-redux";
+import store from "./store/store";
+import AuthContext from "./context/auth-context";
+import ThemeProvider from './context/theme';
+
 import Login from "./Components/Login/Login";
 import Home from "./Components/Home/Home";
 import MainHeader from "./Components/MainHeader/MainHeader";
-import AuthContext from "./Store/auth-context";
+import StoreMain from "./Components/storeMain";
+import TestPage from './Components/pages/TestPage';
+import PrivateRoute from "./context/PrivateRoute";
+import { Roles } from "./context/Roles";
+import Admin from './Components/pages/Admin';
+import CreateTodo from './todo/CreateTodo';
+import Modal from './modals/Modal';
+import ViewTasks from "./todo/ViewTasks";
 
-function App() {
+function App () {
   const ctx = useContext(AuthContext);
-
   return (
-    <React.Fragment>
-      <MainHeader />
-      <main>
-        {!ctx.isLoggedIn && <Login />}
-        {ctx.isLoggedIn && <Home />}
-      </main>
-    </React.Fragment>
+    <>
+      <Provider store={store}>
+        <ThemeProvider>
+          <BrowserRouter>
+            <MainHeader />
+            <Routes>
+              {/* <Route
+                path="user"
+                element={<PrivateRoute roles={[Roles.ADMIN]} authComponent={StoreMain} />}
+              />
+
+              <Route
+                path="test-page"
+                element={<PrivateRoute  authComponent={TestPage} />}
+              />
+              <Route
+                path="/"
+                element={<PrivateRoute roles={[Roles.ADMIN]} authComponent={Home} />}
+             
+             /> */}
+              <Route path='/admin' element={<Admin />}></Route>
+              <Route path='/test-page' element={<TestPage />}></Route>
+              <Route path='/user' element={<StoreMain />}></Route>
+              <Route path='/todo' element={<CreateTodo />}></Route>
+              <Route path='/view-list' element={<ViewTasks />}></Route>
+              <Route path='/login' element={<Login />}></Route>
+            </Routes>
+
+          </BrowserRouter>
+        </ThemeProvider>
+      </Provider>
+    </>
   );
 }
 
 export default App;
 
-// function Counter() {
-//   const [count, setCount] = useState(0);
-//   useEffect(() => {
-//     document.title = `clicked ${count} `;
-//   });
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <p>{count}</p>
-//         <button onClick={() => setCount(count + 1)}>clicked</button>
-//       </header>
-//     </div>
-//   );
-// }

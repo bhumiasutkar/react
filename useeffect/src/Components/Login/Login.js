@@ -4,7 +4,7 @@ import Card from "../UI/Card/Card";
 import classes from "./Login.module.css";
 import Button from "../UI/Button/Button";
 import TextInput from "../UI/InputFields/TextInput";
-import AuthContext from "../../Store/auth-context";
+import AuthContext from "../../context/auth-context";
 
 const emailReducer = (state, action) => {
   if (action.type === "USER_INPUT") {
@@ -35,25 +35,16 @@ const passwordReducer = (state, action) => {
 };
 
 const Login = () => {
-  // const [enteredPassword, setEnteredPassword] = useState("");
-  // const [passwordIsValid, setPasswordIsValid] = useState();
   const ctx = useContext(AuthContext);
   const [formIsValid, setFormIsValid] = useState(false);
 
   const [emailStatus, dispatchEmail] = useReducer(emailReducer, [
     { type: "USER_INPUT", isValid: null },
   ]);
+
   const [passwordStatus, dispatchPassword] = useReducer(passwordReducer, [
     { type: "USER_INPUT", isValid: null },
   ]);
-
-  useEffect(() => {
-    console.log("EFFECT RUNNING");
-
-    return () => {
-      console.log("EFFECT CLEANUP");
-    };
-  }, []);
 
   const { isValid: emailIsValid } = emailStatus;
   const { isValid: passwordIsValid } = passwordStatus;
@@ -71,21 +62,14 @@ const Login = () => {
   }, [emailIsValid, passwordIsValid]);
 
   const emailChangeHandler = (event) => {
-    //setEnteredEmail(event.target.value);
     dispatchEmail({ type: "USER_INPUT", val: event.target.value });
-
-    //setFormIsValid(event.target.value.includes("@") && passwordStatus.isValid);
   };
 
   const passwordChangeHandler = (event) => {
-    //setEnteredPassword(event.target.value);
     dispatchPassword({ type: "USER_INPUT", val: event.target.value });
-    //setFormIsValid(emailStatus.isValid && event.target.value.trim().length > 6);
   };
 
   const onBlurEmailHandler = () => {
-    //setEmailIsValid(emailStatus.val.includes("@"));
-
     dispatchEmail({ type: "INPUT_BLUR" });
   };
 
@@ -95,6 +79,7 @@ const Login = () => {
 
   const submitHandler = (event) => {
     event.preventDefault();
+    console.log('submit');
     ctx.onLogin(emailStatus.val, passwordStatus.val);
   };
 
