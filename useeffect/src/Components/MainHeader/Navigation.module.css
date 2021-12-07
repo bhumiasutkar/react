@@ -8,7 +8,8 @@
 
 .nav li {
   margin: 0;
-  margin-left: 2rem;
+  padding: 0 12px;
+  position: relative;
 }
 
 .nav a {
@@ -19,6 +20,11 @@
 .nav a:hover,
 .nav a:active {
   color: #f3cafb;
+
+}
+
+.nav ul li:hover ul {
+  display: block;
 }
 
 .nav button {
@@ -40,4 +46,26 @@
 .nav button:active {
   color: #f3cafb;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.26);
+}
+
+ul.subMenu {
+  display: none;
+  position: absolute;
+  background: #fff;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 26%);
+  border-radius: 10px;
+  text-align: left;
+  left: -7px;
+  top: 28x;
+}
+
+ul.subMenu li {
+  display: block;
+  color: #000;
+  margin: 0;
+  padding: 5px 20px;
+}
+
+ul.subMenu li a {
+  color: #000;
 }

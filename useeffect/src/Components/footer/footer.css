@@ -1,0 +1,7 @@
+footer {
+    box-sizing: border-box;
+    position: relative;
+    background: #000;
+    padding: 30px 0;
+    color: #fff;
+}

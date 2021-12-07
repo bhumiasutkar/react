@@ -2,3 +2,65 @@
     box-sizing: border-box;
     padding: 80px;
 }
+
+.card-header {
+    background-color: hsla(0, 0%, 100%, 0)
+}
+
+.card-body {
+    position: relative;
+}
+
+.table-footer {
+    padding: 20px 5px;
+}
+
+.card-body table img {
+    width: 55px;
+    height: auto;
+}
+
+table thead,
+tr {
+    border: 0 solid;
+    border-color: inherit;
+}
+
+tr th {
+    border-top: 0;
+}
+
+.table>:not(:last-child)>:last-child>* {
+    border-bottom-color: inherit;
+    border-top: 0;
+}
+
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+    border: 0 solid;
+    border-color: inherit;
+}
+
+.form-check-inline .form-check-input {
+    margin-top: 4px;
+}
+
+img.form-img__img-preview {
+    max-width: 150px;
+}
+
+.table>:not(:first-child) {
+    border-top: 0;
+}
+
+.custom-pagination {
+    margin-top: 12px;
+}
+
+.search-box {
+    margin: 20px 0;
+}

@@ -184,3 +184,7 @@
     background: #6fb32b;
     outline: none;
 }
+
+.modal.show {
+    display: block;
+}

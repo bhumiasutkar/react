@@ -43,12 +43,21 @@ export const TodoReducer = (state = initialData, action) => {
                 tasks
             };
         case actions.DELETE_TASK:
-            const Items = [...state.tasks],
-                filtered = Items.filter(el => el.id !== action.payload);
-            console.log('filtered ', filtered);
+
+            const tasksList = [...state.List];
+            const taskIndex = tasksList.findIndex(
+                (task) => task.id === actions.payload
+            );
+            tasksList.splice(taskIndex, 1);
+
+            return { ...state, tasks };
+
+        case actions.FILTER_TASK:
+            const Items = [...state.tasks];
+            const filtered = Items.filter(el => el.assiggnedTo.toLowerCase().indexOf(action.payload) !== -1);
             return {
                 ...state,
-                filtered
+                tasks: filtered
             };
         default:
             return state;

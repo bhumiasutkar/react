@@ -1,12 +1,15 @@
 import React from 'react';
 import StoreMain from '../storeMain';
+import PageLayout from '../../layout/PageLayout';
 
 function Admin (props) {
     return (
-        <div>
-            <StoreMain />
-        </div>
+        <section className="jumbotron">
+            <div className="container">
+                <StoreMain />
+            </div>
+        </section>
     );
 }
 
-export default Admin;
+export default PageLayout(Admin);

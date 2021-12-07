@@ -7,12 +7,14 @@ import { Link, Route, Routes } from 'react-router-dom';
 
 const Navigation = () => {
   const ctx = useContext(AuthContext);
-  console.log("is user logged in ", ctx.isLoggedIn);
   return (
     <nav className={classes.nav}>
       <ul>
         {ctx.isLoggedIn && (
           <>
+            <li >
+              <Link to="/">Home</Link>
+            </li>
             <li >
               <Link to="/user">Users</Link>
             </li>
@@ -24,6 +26,14 @@ const Navigation = () => {
             </li>
             <li>
               <Link to="/todo">Todo</Link>
+              <ul className={classes.subMenu}>
+                <li>
+                  <Link to="/todo">Create Todo</Link>
+                </li>
+                <li>
+                  <Link to="/view-list">View</Link>
+                </li>
+              </ul>
             </li>
             <li>
               <Link to="/view-list">View</Link>

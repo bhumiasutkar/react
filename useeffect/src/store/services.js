@@ -1,13 +1,15 @@
 import axios from "axios";
 
 export const createTodoItem = async (createdata) => {
+
     const data = await axios.post('http://localhost:40001/todo', createdata);
     return data;
 };
 
-// export const deleteTodoItem = (id) => {
-//     return axios.delete(`http://localhost:40001/todo/${id}`);
-// };
+export const deleteTodoItem = async (id) => {
+    const filerData = await axios.delete(`http://localhost:40001/todo/${id}`);
+    return filerData;
+};
 
 export const getTodoItem = async () => {
     const data = await axios.get(`http://localhost:40001/todo`);
@@ -19,7 +21,7 @@ export const filterTodoItem = async (key) => {
     return filter;
 };
 
-export const editTodoItem = async (id) => {
-    const updated = await axios.get(`http://localhost:40001/todo/${id}`);
+export const editTodoItem = async (id, item) => {
+    const updated = await axios.put(`http://localhost:40001/todo/${id}`, item);
     return updated;
 };

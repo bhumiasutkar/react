@@ -1,5 +1,5 @@
 import { actions } from "./actionType";
-import { createTodoItem, getTodoItem } from "./services";
+import { createTodoItem, getTodoItem, deleteTodoItem, editTodoItem, filterTodoItem } from "./services";
 
 export const addUser = (name, description) => {
     return {
@@ -46,7 +46,7 @@ export const setUser = (data) => {
 /*-----------todo using Thunk -----------*/
 export const getTask = () => {
     return (dispatch) => {
-        getTodoItem().then((res) => {
+        getTodoItem().then((res) => { /// thunk
             dispatch({ type: actions.GET_TASK, payload: res.data });
         });
     };
@@ -62,14 +62,21 @@ export const createTask = (userTask) => {
     };
 };
 
-export const editTask = () => {
+export const editTask = (id, item) => {
     return (dispath) => {
-
+        editTodoItem(id, item).then((res) => {
+            dispath({ type: actions.EDIT_TASK, payload: res.data });
+        }).catch(err => console.log('edit error ', err));
     };
 };
 export const deleteTask = (id) => {
-    return {
-        type: actions.DELETE_TASK,
-        payload: id
+    return (dispatch) => {
+        deleteTodoItem(id).then((res) => {
+            dispatch({ type: actions.DELETE_TASK, payload: id });
+        }).catch(err => console.log('edit error ', err));
     };
+};
+
+export const filterTask = (name) => {
+    return { type: actions.FILTER_TASK, payload: name };
 };

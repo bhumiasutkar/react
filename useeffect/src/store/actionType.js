@@ -9,5 +9,6 @@ export const actions = {
     CREATE_TASK: 'create task',
     GET_TASK: 'get task',
     EDIT_TASK: 'edit task',
-    DELETE_TASK: 'delete task'
+    DELETE_TASK: 'delete task',
+    FILTER_TASK: 'filter task'
 };

@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import Button from "../UI/Button/Button";
-import Login from "../Login/Login";
-import Card from "../UI/Card/Card";
+import Button from "../Components/UI/Button/Button";
+import Card from "../Components/UI/Card/Card";
 import classes from "./Home.module.css";
-import AuthContext from "../../context/auth-context";
+import AuthContext from "../context/auth-context";
+import PageLayout from "../layout/PageLayout";
 
 const Home = () => {
   const ctx = useContext(AuthContext);
@@ -17,4 +17,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default PageLayout(Home);

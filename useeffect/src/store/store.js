@@ -1,4 +1,5 @@
 import { combineReducers, createStore, applyMiddleware } from "redux";
+import { composeWithDevTools } from 'redux-devtools-extension';
 import { UserReducer, TodoReducer } from './reducer';
 import createSagaMiddleware from "@redux-saga/core";
 import { watcherSaga } from "./sagas/rootSagas";
@@ -16,7 +17,7 @@ const sagaMiddleware = createSagaMiddleware();
 
 const middleware = [sagaMiddleware, thunk];
 
-const store = createStore(rootStore, {}, applyMiddleware(...middleware)); // {} is enhancer 
+const store = createStore(rootStore, {}, composeWithDevTools(applyMiddleware(...middleware))); // {} is enhancer
 sagaMiddleware.run(watcherSaga);
 
 export default store;

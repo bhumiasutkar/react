@@ -1,23 +1,33 @@
 import React from 'react';
+import { deleteTask } from '../store/actionCreator';
+import { useDispatch } from 'react-redux';
+import CreateTodo from '../todo/CreateTodo';
 
 export const DeleteListModal = (props) => {
+    const dispatch = useDispatch();
+    console.log(props);
+
+    const deleteTaskHandler = () => {
+        dispatch(deleteTask(props.target));
+        props.setIsOpen(false);
+    };
     return (
         <>
-            <div class="modal-dialog modal-confirm">
-                <div class="modal-content">
-                    <div class="modal-header flex-column">
-                        <div class="icon-box">
-                            <i class="material-icons">&#xE5CD;</i>
+            <div className="modal-dialog modal-confirm">
+                <div className="modal-content">
+                    <div className="modal-header flex-column">
+                        <div className="icon-box">
+                            <i className="material-icons">&#xE5CD;</i>
                         </div>
-                        <h4 class="modal-title w-100">Are you sure?</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 className="modal-title w-100">Are you sure?</h4>
+                        <button type="button" className="close" data-dismiss="modal" onClick={props.onClose}>&times;</button>
                     </div>
-                    <div class="modal-body">
+                    <div className="modal-body">
                         <p>Do you really want to delete these records? This process cannot be undone.</p>
                     </div>
-                    <div class="modal-footer justify-content-center">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                        <button type="button" class="btn btn-danger">Delete</button>
+                    <div className="modal-footer justify-content-center">
+                        <button type="button" className="btn btn-secondary" onClick={props.onClose}>Cancel</button>
+                        <button type="button" className="btn btn-danger" onClick={deleteTaskHandler}>Delete</button>
                     </div>
                 </div>
             </div>
@@ -25,22 +35,55 @@ export const DeleteListModal = (props) => {
     );
 };
 
-export const AddListModal = () => {
+export const AddListModal = (props) => {
+    const dispatch = useDispatch();
+    console.log(props);
+
+    const successTaskHandler = () => {
+        dispatch(deleteTask(props.target));
+        props.setIsOpen(false);
+    };
     return (
         <>
-            <div class="modal-dialog modal-success">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <div class="icon-box">
-                            <i class="material-icons">&#xE876;</i>
+            <div className="modal-dialog modal-success">
+                <div className="modal-content">
+                    <div className="modal-header">
+                        <div className="icon-box">
+                            <i className="material-icons">&#xE876;</i>
                         </div>
-                        <h4 class="modal-title w-100">Awesome!</h4>
+                        <h4 className="modal-title w-100">Awesome!</h4>
                     </div>
-                    <div class="modal-body">
-                        <p class="text-center">Your booking has been confirmed. Check your email for detials.</p>
+                    <div className="modal-body">
+                        <p className="text-center">Your booking has been confirmed. Check your email for detials.</p>
                     </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-success btn-block" data-dismiss="modal">OK</button>
+                    <div className="modal-footer">
+                        <button className="btn btn-success btn-block" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </>
+    );
+};
+
+export const EditListModal = (props) => {
+    const dispatch = useDispatch();
+    const editTaskHandler = () => {
+        // dispatch(deleteTask(props.target));
+        // props.setIsOpen(false);
+    };
+    return (
+        <>
+            <div className="modal-dialog modal-success">
+                <div className="modal-content">
+                    <div className="modal-header">
+                        <div className="icon-box">
+                            <i className="material-icons">&#xE254;</i>
+                        </div>
+                        <button type="button" className="close" data-dismiss="modal" onClick={props.onClose}>&times;</button>
+                        <h4 className="modal-title w-100">Edit</h4>
+                    </div>
+                    <div className="modal-body">
+                        <CreateTodo data={props.formData} />
                     </div>
                 </div>
             </div>

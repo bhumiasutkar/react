@@ -2,81 +2,52 @@
   "todo": [
     {
       "id": 1,
-      "assiggnedTo": "Tonny",
-      "taskName": "delectus aut autem",
-      "taskStatus": false
+      "assiggnedTo": "Peat",
+      "taskName": "Music",
+      "taskStatus": "new",
+      "profilePic": "avatar.jpg"
     },
     {
       "id": 2,
-      "assiggnedTo": "Suraj",
-      "taskName": "delectus aut autem",
-      "taskStatus": false
+      "assiggnedTo": "Harry",
+      "taskName": "Music",
+      "taskStatus": "new",
+      "profilePic": "avatar.jpg"
     },
     {
       "id": 3,
-      "assiggnedTo": "Bhumi",
-      "taskName": "delectus aut autem",
-      "taskStatus": false
+      "assiggnedTo": "Jeams",
+      "taskName": "Music",
+      "taskStatus": "new",
+      "profilePic": "avatar.jpg"
     },
     {
       "id": 4,
-      "assiggnedTo": "knknk",
-      "taskName": "knk",
-      "taskStatus": "new"
+      "assiggnedTo": "Hasly",
+      "taskName": "Music",
+      "taskStatus": "new",
+      "profilePic": "avatar.jpg"
     },
     {
       "id": 5,
-      "assiggnedTo": "knknk",
-      "taskName": "knk",
-      "taskStatus": "new"
+      "assiggnedTo": "Jack",
+      "taskName": "Music",
+      "taskStatus": "new",
+      "profilePic": "avatar.jpg"
     },
     {
       "id": 6,
-      "assiggnedTo": "sss",
-      "taskName": "l,l,l",
-      "taskStatus": "new"
+      "assiggnedTo": "Rose",
+      "taskName": "Music",
+      "taskStatus": "new",
+      "profilePic": "avatar.jpg"
     },
     {
       "id": 7,
-      "assiggnedTo": "sds",
-      "taskName": "cd",
-      "taskStatus": "new"
-    },
-    {
-      "id": 8,
-      "assiggnedTo": "sds",
-      "taskName": "cd",
-      "taskStatus": "new"
-    },
-    {
-      "id": 9,
-      "assiggnedTo": "Bhumi",
-      "taskName": "nothing",
-      "taskStatus": "new"
-    },
-    {
-      "id": 10,
-      "assiggnedTo": "Tonny",
-      "taskName": "dummy",
-      "taskStatus": "new"
-    },
-    {
-      "id": 11,
-      "assiggnedTo": "BHumi",
-      "taskName": "test",
-      "taskStatus": "new"
-    },
-    {
-      "id": 12,
-      "assiggnedTo": "sxs",
-      "taskName": "d",
-      "taskStatus": "new"
-    },
-    {
-      "id": 13,
-      "assiggnedTo": "sxs",
-      "taskName": "d",
-      "taskStatus": "new"
+      "assiggnedTo": "Misty",
+      "taskName": "Music",
+      "taskStatus": "new",
+      "profilePic": "avatar.jpg"
     }
   ]
 }

@@ -91,7 +91,13 @@ table.table td:last-child {
   width: 130px;
 }
 
-table.table td a {
+table.table td button {
+  border: 0;
+  background: transparent;
+}
+
+table.table td a,
+table.table td button {
   color: #a0a5b1;
   display: inline-block;
   margin: 0 5px;
@@ -101,11 +107,12 @@ table.table td a.view {
   color: #03A9F4;
 }
 
-table.table td a.edit {
+table.table td a.edit,
+table.table td button.edit {
   color: #FFC107;
 }
 
-table.table td a.delete {
+table.table td button.delete {
   color: #E34724;
 }
 
