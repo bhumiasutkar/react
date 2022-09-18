@@ -7,6 +7,6 @@ const { create } = require('../controllers/category');
 
 router.post('/category/create/:userId', requireSignin, isAdmin, isAuth, create);
 
-router.param("userId", userById);
+router.param('userId', userById);
 
-module.export = router;
+module.exports = router;

@@ -9,4 +9,4 @@ router.post('/product/create/:userId', requireSignin, isAdmin, isAuth, create);
 
 router.param("userId", userById);
 
-module.export = router;
+module.exports = router;
