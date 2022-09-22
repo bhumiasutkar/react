@@ -8,12 +8,12 @@ const productSchema = new mongoose.Schema({
         required: true,
         maxlength: 32
     },
-    // category: {
-    //     type: ObjectId,
-    //     ref: 'Category',
-    //     required: true,
-    //     maxlength: 32
-    // },
+    category: {
+        type: ObjectId,
+        ref: 'Category',
+        required: true,
+        maxlength: 32
+    },
     description: {
         type: String,
         required: true,
@@ -26,7 +26,7 @@ const productSchema = new mongoose.Schema({
     },
     photo: {
         data: Buffer,
-        constentType: String
+        contentType: String
     },
     price: {
         type: Number,
@@ -38,6 +38,6 @@ const productSchema = new mongoose.Schema({
         required: false,
         type: Boolean
     }
-}, { timeStamps: true });
+}, { timestamps: true });
 
 module.exports = mongoose.model('Product', productSchema);

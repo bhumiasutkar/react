@@ -35,7 +35,7 @@ const userSchema = new mongoose.Schema({
         type: Array,
         default: []
     }
-}, { timeStamps: true });
+}, { timestamps: true });
 
 //virtual field
 
